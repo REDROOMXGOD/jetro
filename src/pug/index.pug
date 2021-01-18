@@ -47,5 +47,32 @@ main.main
           .col-2
             button.carousel-nav__button
               img(src='./images/carousel-item-6.jpg' alt='Sixth slide').carousel-nav__image
-
+  .advantages
+    .container
+      .row
+        .col-6.col-md-4
+          .advantages-item
+            .advantages-item__header
+              svg(width="46" height="46" fill="#e8663c")
+                use(xlink:href="./images/sprite.svg#gear-icon")
+              h2.advantages-item__title.heading Check out  my  latest portfolio  items
+            p.advantages-item__desc Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam ullamcorper dui sed magna posue re ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius fermentum iaculis. Aenean sodales nibh non lectus tempor a interdum justo ultricies.
+            a(href="#").advantages-item__link.heading More
+        .col-6.col-md-4
+          .advantages-item
+            .advantages-item__header
+              svg(width="49" height="40" fill="#e8663c")
+                use(xlink:href="./images/sprite.svg#success-icon")
+              h2.advantages-item__title.heading Offer  Top  Notch  Quality Work  &  Services
+            p.advantages-item__desc Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam ullamcorper dui sed magna posue re ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius fermentum iaculis. Aenean sodales nibh non lectus tempor a interdum justo ultricies.
+            a(href="#").advantages-item__link.heading More
+        .col-6.col-md-4
+          .advantages-item
+            .advantages-item__header
+              svg(width="41" height="40" fill="#e8663c")
+                use(xlink:href="./images/sprite.svg#user-icon")
+              h2.advantages-item__title.heading Follow  Me  on  Twitter,  Facebook  &  Pinterest
+            p.advantages-item__desc Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam ullamcorper dui sed magna posue re ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius fermentum iaculis. Aenean sodales nibh non lectus tempor a interdum justo ultricies.
+            a(href="#").advantages-item__link.heading More
+          
 include components/footer.pug
