@@ -24,7 +24,7 @@ html(lang="en")
                 if key == title
                   - className += ' header-nav__item--active'
                 a(href='/' + key + '.html' class=className)= val
-      if title != 'home'                  
+      if title != 'index'                  
         .header-banner.ears
           .container.header-banner__container
             span.header-banner__title.heading #{title}

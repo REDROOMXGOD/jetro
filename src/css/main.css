@@ -50,7 +50,6 @@ body {
 
 .header-row {
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .header__logo {
@@ -92,6 +91,7 @@ body {
   background: #e8603c;
   padding-top: 20px;
   padding-bottom: 20px;
+  margin-top: 20px;
 }
 
 .header-banner__title {
@@ -185,4 +185,55 @@ body {
   .footer-section {
     margin-bottom: 25px;
   }
+}
+
+/* carousel index */
+
+.carousel {
+  height: 340px;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item {
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-control {
+  background: transparent;
+  border: none;
+}
+
+.sr-only {
+  display: none;
+}
+
+.carousel-nav {
+  margin-bottom: 35px;
+}
+
+.carousel-nav__button {
+  width: 100%;
+  padding-bottom: 86%;
+  position: relative;
+  border: none;
+}
+
+.carousel-nav__image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
