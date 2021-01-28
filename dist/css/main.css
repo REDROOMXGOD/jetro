@@ -1,4 +1,7 @@
 /* GLOBAL */
+:root {
+  --primary-color: #e8603c;
+}
 
 body {
   line-height: 1;
@@ -54,12 +57,12 @@ body {
 
 .header__logo {
   font-size: 36px;
-  color: #e8603c;
+  color: var(--primary-color, #e8603c);
   text-decoration: none;
 }
 
 .header__logo:hover {
-  color: #e8603c;
+  color: var(--primary-color, #e8603c);
 }
 
 .header__logo span {
@@ -88,7 +91,7 @@ body {
 }
 
 .header-banner__container {
-  background: #e8603c;
+  background: var(--primary-color, #e8603c);
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 20px;
@@ -271,4 +274,59 @@ body {
   padding: 10px;
   text-decoration: none;
   display: inline-block;
+}
+
+/* works index */
+
+.works {
+}
+
+.works__title {
+  font-size: 18px;
+  color: var(--primary-color, #e8603c);
+  background: center left 130px no-repeat url("../images/line.png");
+  margin-bottom: 30px;
+}
+
+.works-list {
+  padding: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.works-list__image {
+  max-width: 100%;
+}
+
+.works-info {
+  padding: 15px;
+}
+
+.works-list > li {
+  margin-bottom: 20px;
+  aspect-ratio: 4/4;
+}
+
+.works-list__item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dbdbdb;
+  height: 100%;
+}
+
+.works-list__image {
+  flex-grow: 1;
+  object-fit: cover;
+}
+
+.works-list__link {
+  display: block;
+  color: #b9b9b9;
+  text-decoration: none;
+}
+
+.works-list__date {
+  font-size: 11px;
+  color: var(--primary-color, #e8603c);
 }
