@@ -13,4 +13,22 @@ $(document).ready(function () {
       carouselContainer.carousel(id);
     });
   });
+
+  // portfolio filter buttons
+  const portfolioItems = $(".works-item");
+
+  $(".portfolio-nav__button").click(function () {
+    const findedCategory = $(this).data("toggle"),
+      buttonActiveClass = "portfolio-nav__button--active";
+    $(`.${buttonActiveClass}`).removeClass(buttonActiveClass);
+    $(this).addClass(buttonActiveClass);
+    portfolioItems.each(function (i, item) {
+      const itemCategory = $(this).data("category");
+      $(this).css("display", "none");
+      if (itemCategory === findedCategory) {
+        $(this).css("display", "block");
+      }
+      if (findedCategory === "all") $(this).css("display", "block");
+    });
+  });
 });
