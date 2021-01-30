@@ -280,6 +280,14 @@ body {
 .works {
 }
 
+.works-item {
+  display: none;
+}
+
+.works-item--active {
+  display: block;
+}
+
 .works__title {
   font-size: 18px;
   color: var(--primary-color, #e8603c);

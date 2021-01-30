@@ -15,20 +15,17 @@ $(document).ready(function () {
   });
 
   // portfolio filter buttons
-  const portfolioItems = $(".works-item");
-
-  $(".portfolio-nav__button").click(function () {
-    const findedCategory = $(this).data("toggle"),
-      buttonActiveClass = "portfolio-nav__button--active";
-    $(`.${buttonActiveClass}`).removeClass(buttonActiveClass);
-    $(this).addClass(buttonActiveClass);
-    portfolioItems.each(function (i, item) {
-      const itemCategory = $(this).data("category");
-      $(this).css("display", "none");
-      if (itemCategory === findedCategory) {
-        $(this).css("display", "block");
-      }
-      if (findedCategory === "all") $(this).css("display", "block");
+  function tabs(controlsClass, controlAttr, itemsClass, itemAttr) {
+    $(controlsClass).click(function () {
+      const neededItem = $(this).data(controlAttr);
+      const activeItemClass = (itemsClass + "--active").slice(1);
+      $(itemsClass).each(function () {
+        $(this).data(itemAttr).includes(neededItem)
+          ? $(this).addClass(activeItemClass)
+          : $(this).removeClass(activeItemClass);
+      });
     });
-  });
+  }
+
+  tabs(".portfolio-nav__button", "toggle", ".works-item", "category");
 });
