@@ -13,6 +13,11 @@ body {
   font-family: "Bebas Neue", cursive;
 }
 
+.section-title {
+  color: var(--primary-color, #e8603c);
+  background: center left 130px no-repeat url("../images/line.png");
+}
+
 .ears {
   position: relative;
 }
@@ -186,6 +191,44 @@ body {
   }
 }
 
+/* sidebar */
+
+.sidebar-item + .sidebar-item {
+  margin-top: 30px;
+}
+
+.sidebar-item__title {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.sidebar-item__desc {
+  font-size: 12px;
+}
+
+.sidebar-nav__link {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+
+.sidebar-gallery {
+  list-style-type: none;
+  /* display: flex;
+  flex-wrap: wrap; */
+  padding: 0;
+}
+
+.sidebar-gallery__item {
+  margin-bottom: 5px;
+}
+
+.sidebar-gallery__image {
+  width: 100%;
+}
+
 /* carousel index */
 
 .carousel {
@@ -290,8 +333,6 @@ body {
 
 .works__title {
   font-size: 18px;
-  color: var(--primary-color, #e8603c);
-  background: center left 130px no-repeat url("../images/line.png");
   margin-bottom: 30px;
 }
 
