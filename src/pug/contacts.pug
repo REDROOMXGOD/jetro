@@ -1,0 +1,17 @@
+- var title = 'contacts';
+include components/common/header.pug
+main.main
+  .contacts
+    .container
+      .row
+        .col-sm-12.col-md-8
+          include components/contact/map.pug
+          .row
+            .col-12.col-md-4
+              include components/contact/information.pug
+            .col-12.col-md-8
+              include components/contact/form.pug
+        .col-sm-12.col-md-4
+          include components/common/sidebar.pug
+
+include components/common/footer.pug
