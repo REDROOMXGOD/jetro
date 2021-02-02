@@ -15,7 +15,12 @@ body {
 
 .section-title {
   color: var(--primary-color, #e8603c);
-  background: center left 130px no-repeat url("../images/line.png");
+  background: center left no-repeat url("../images/line.png");
+}
+
+.section-title span {
+  background: #fff;
+  padding-right: 15px;
 }
 
 .ears {

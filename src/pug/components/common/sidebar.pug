@@ -2,15 +2,18 @@
 - var gallery = ['images/dev-photo-1.jpg', 'images/dev-photo-1.jpg','images/dev-photo-1.jpg','images/dev-photo-1.jpg','images/dev-photo-1.jpg','images/dev-photo-1.jpg','images/dev-photo-1.jpg','images/dev-photo-1.jpg'];
 .sidebar
   .sidebar-item
-    h3.section-title.sidebar-item__title.heading About  Jetro
+    h3.section-title.sidebar-item__title.heading 
+      span About  Jetro
     p.sidebar-item__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praese nt libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elemen tum imperdiet. Duis sagittis ipsum. 
   .sidebar-item
-    h3.section-title.sidebar-item__title.heading Categories
+    h3.section-title.sidebar-item__title.heading 
+      span Categories
     nav.sidebar-nav.d-flex.justify-content-between.d-md-block
       each val in links
         a(href="#").sidebar-nav__link= val
   .sidebar-item
-    h3.section-title.sidebar-item__title.heading Photo  Gallery
+    h3.section-title.sidebar-item__title.heading 
+      span Photo  Gallery
     ul.sidebar-gallery.row
       each val in gallery
         li.sidebar-gallery__item.col-2.col-md-4.col-lg-3
