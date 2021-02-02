@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 32" width="27" height="32">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+	</style>
+	<g id="Blog Section">
+		<g id="Post 3">
+			<g id="icon">
+				<path id="icon" class="shp0" d="M0.06 31.97L0 32L0 0L26.67 15.93L0.06 31.97Z" />
+			</g>
+		</g>
+	</g>
+</svg>

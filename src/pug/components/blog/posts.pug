@@ -1,0 +1,32 @@
+- var posts = {post1: {category: 'photo', imgsrc: './images/blog-post-1.jpg', title: 'Top  WordPress  Themes  of  2012', summary: 'Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim hendrerit in usu. Iriure delectus mea at, vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei. Ne eos vidisse splendide instructior. Mei no latine praesent forensibus, te sed habemus tacimates, ad ipsum officiis constituto usu. Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam ullamcorper dui sed magna posuere ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius fermentum iaculis  ...', date: 'April 15, 2012', tags: 'Website | Design', comments: '4'}, post2: {category: 'news', imgsrc: './images/blog-post-2.jpg', title: 'Jesus  Typography  Wallpaper  Giveaway!', summary: 'Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim hendrerit in usu. Iriure delectus mea at, vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei. Ne eos vidisse splendide instructior. Mei no latine praesent forensibus, te sed habemus tacimates, ad ipsum officiis constituto usu.Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam ullamcorper dui sed magna posuere ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius fermentum iaculis  ...', date: 'April 15, 2012', tags: 'Website | Design', comments: '4'}, post3: {category: 'video', videosrc: 'https://www.youtube.com/watch?v=yUQM7H4Swgw', title: 'Big  Buck  Bunny  Trailer', summary: 'Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim hendrerit in usu. Iriure delectus mea at, vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei. Ne eos vidisse splendide instructior. Mei no latine praesent forensibus, te sed habemus tacimates, ad ipsum officiis constituto usu.Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam ullamcorper dui sed magna posuere ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius fermentum iaculis  ...', date: 'April 15, 2012', tags: 'Website | Design', comments: '4'}, post4: {category: 'quote', quote: 'Write anything you want here in this quotable area. Something unique you want people to learn about your website or some cool random fact. Its totally up to you.'}, post4: {category: 'ads', title: 'Some  of  the  best  freebies  on  the  web', customer: 'www.bestpsdfreebies.com', summary: 'Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim hendrerit in usu. Iriure delectus mea at, vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei.'}};
+
+each val in posts
+  article(class="blog-post blog-post--"+val.category)
+    if val.category === 'quote'
+      blockquote.blog-post__quote= val.quote
+    else if val.category === 'ads' 
+      h1.blog-post__header.heading
+        a(href="#").blog-post__link= val.title
+      span.blog-post__customer= val.customer
+      p.blog-post__summary= val.summary
+    else
+      if val.imgsrc
+        img(src=val.imgsrc, alt="post image").blog-post__image
+      if val.videosrc
+        video(src=val.videosrc controls).blog-post__video
+      .row
+        .col-3.col-lg-2
+          ul.blog-post__info
+            li
+              span.blog-post__caption.heading Date
+              span.blog-post__desc= val.date
+            li
+              span.blog-post__caption.heading Tags
+              span.blog-post__desc= val.tags
+            li
+              span.blog-post__caption.heading Comments
+              span.blog-post__desc= val.comments
+        .col-9.col-lg-10
+          h1.blog-post__header.heading
+            a(href="#").blog-post__link= val.title
+          p.blog-post__summary= val.summary
