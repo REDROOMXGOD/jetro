@@ -10,10 +10,12 @@ function readyReload(cb) {
   cb();
 }
 
-const pugPath = "./pug/*.pug";
+const pugPath = "./pug/**/*.pug";
 
 function pugToHtml() {
-  return src(pugPath).pipe(pug()).pipe(dest("../dist"));
+  return src([pugPath, "!./pug/components/*.pug"])
+    .pipe(pug())
+    .pipe(dest("../dist"));
 }
 
 const svgPath = "./images/*.svg";

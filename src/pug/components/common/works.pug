@@ -1,17 +1,18 @@
 - var works = [{src: 'works-item-1.jpg', category: 'all print', alt: 'work item 1', href: '#', name: 'Character  Design', date: 'June 15, 2012'},{src: 'works-item-2.jpg', category: 'all web', alt: 'work item 2', href: '#', name: 'Brochure  Design', date: 'June 15, 2012'},{src: 'works-item-3.jpg', category: 'all photoshop', alt: 'work item 3', href: '#', name: 'Social Media Buttons', date: 'June 15, 2012'},{src: 'works-item-4.jpg', category: 'all wordpress', alt: 'work item 4', href: '#', name: 'WordPress  Theme', date: 'June 15, 2012'},{src: 'works-item-5.jpg', category: 'all print', alt: 'work item 5', href: '#', name: 'Poster', date: 'June 15, 2012'},{src: 'works-item-6.jpg', category: 'all web', alt: 'work item 6', href: '#', name: 'Web  Graphic  Element', date: 'June 15, 2012'},{src: 'works-item-7.jpg', category: 'all photoshop', alt: 'work item 7', href: '#', name: 'Brochure  Design', date: 'June 15, 2012'},{src: 'works-item-8.jpg', category: 'all wordpress', alt: 'work item 8', href: '#', name: 'Big  buck  Bunney', date: 'June 15, 2012'},{src: 'works-item-9.jpg', category: 'all print', alt: 'work item 9', href: '#', name: 'Cartoon  Characters', date: 'June 15, 2012'},{src: 'works-item-10.jpg', category: 'all web', alt: 'work item 10', href: '#', name: 'Sticker  Design', date: 'June 15, 2012'},{src: 'works-item-11.jpg', category: 'all photoshop', alt: 'work item 11', href: '#', name: 'Business  Cards', date: 'June 15, 2012'},{src: 'works-item-12.jpg', category: 'all wordpress', alt: 'work item 12', href: '#', name: 'Slider  Plugin', date: 'June 15, 2012'}]
+- var dir = nested ? '..' : '.';
 
 .works
   .container
-    if title == 'index'  
+    if title == 'index' || title == 'portfolio-item'
       h2.works__title.section-title.heading
         span Recent  Works
     ul.works-list.row
       each val, key in works
-        if(title == 'index' && key > 3)
+        if((title == 'index' || title ==  'portfolio-item') && key > 3)
           - break
         li(data-category=val.category).col-sm-6.col-md-4.col-lg-3.works-item.works-item--active
           .works-list__item
-            img(src="./images/" + val.src alt=val.alt).works-list__image
+            img(src=dir+"/images/" + val.src alt=val.alt).works-list__image
             .works-info
-              a(href="#").works-list__link.heading= val.name
+              a(href=dir+"/portfolio/portfolio-item-"+(key+1)+".html").works-list__link.heading= val.name
               time(datetime="2012-06-15").works-list__date.heading= val.date

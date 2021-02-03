@@ -15,7 +15,7 @@ body {
 
 .section-title {
   color: var(--primary-color, #e8603c);
-  background: center left no-repeat url("../images/line.png");
+  background: center left repeat url("../images/line.png");
 }
 
 .section-title span {
@@ -427,6 +427,26 @@ body {
 
 .portfolio-nav__button + .portfolio-nav__button {
   margin-left: 4px;
+}
+
+/* portfolio items */
+
+.portfolio-item__image {
+  width: 100%;
+  /* max-height: 400px; */
+  object-fit: cover;
+  aspect-ratio: 940/400;
+  margin-bottom: 22px;
+}
+
+.portfolio-item__desc {
+  font-size: 12px;
+  line-height: 18px;
+  color: #414141;
+}
+
+.portfolio-item__desc + .portfolio-item__desc {
+  margin-top: 25px;
 }
 
 /* about */

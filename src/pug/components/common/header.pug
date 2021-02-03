@@ -1,4 +1,5 @@
-- var pages = {'index': 'home', 'about': 'about us', 'blog': 'blog', 'portfolio': 'portfolio', 'contacts': 'contact us'}
+- var pages = {'index': 'home', 'about': 'about us', 'blog': 'blog', 'portfolio': 'portfolio', 'contacts': 'contact us'};
+- var dir = nested ? '..' : '.';
 <!DOCTYPE html>
 html(lang="en")
   head
@@ -8,9 +9,9 @@ html(lang="en")
     link(rel="preconnect" href="https://fonts.gstatic.com")
     link(href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet")
     link(href="http://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet")
-    link(rel="stylesheet", href="css/libs/bootstrap/bootstrap-grid.min.css")
-    link(rel="stylesheet", href="css/libs/bootstrap/bootstrap.min.css")
-    link(rel="stylesheet", href="css/main.css")
+    link(rel="stylesheet", href=dir+"/css/libs/bootstrap/bootstrap-grid.min.css")
+    link(rel="stylesheet", href=dir+"/css/libs/bootstrap/bootstrap.min.css")
+    link(rel="stylesheet", href=dir+"/css/main.css")
   body
     header.header
       .container
@@ -23,7 +24,7 @@ html(lang="en")
                 - var className = 'header-nav__item heading';
                 if key == title
                   - className += ' header-nav__item--active'
-                a(href='/' + key + '.html' class=className)= val
+                a(href='/' + key + '.html' class=className)= val 
       if title != 'index'                  
         .header-banner.ears
           .container
